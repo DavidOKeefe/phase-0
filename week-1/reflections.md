@@ -21,3 +21,31 @@ The listed commands are:
   - rmdir: remove folder
   - rm: remove file
   - help: can run on another command to show basic info about that command
+
+#1.4 Forking and Cloning Reflection
+
+If you want to set up a new project on Github, the first step is to create a new repository. These steps will walk you through the process:
+
+  1. Navigate to Github through your browser and sign in to your Github account
+  2. In the upper right corner of the page, click the plus sign and select New Repository from the dropdown menu
+  3. Give your repository a name
+  4. Select if the repository will be visible publicly or privately
+  5. Select the option to initialize with a README
+  6. Select the type of license for your project
+  7. Click Create Repository
+
+Your repository is now created on Github! Next you'll want to clone the repository to your computer so you can start tracking and committing your work.
+
+  1. In Github, navigate to your newly created repository, find the SSH clone URL option and click Copy to Clipboard
+  2. Open a terminal session and go to the directory where your project will be saved
+  3. Type the command: git clone, paste the copied SSH clone URL and hit enter (note: you may be asked for your user name and password within the terminal)
+
+A new directory has been created on you local machine containing the README and license agreement! You can now start creating your project in this directory and commit to your Github repository!
+
+Sometimes you won't be creating a project from scratch and instead will be contributing to an existing project. For this you will fork an existing repository to create a copy that you can work on without affecting the original. To do this you'll:
+
+  1. Navigate to the repository you want to fork in Github
+  2. In the upper right of the screen, click the fork button and a popup will appear asking you to select where to fork this repository
+  3. Select your Github account
+
+A forked version of the repository has been created! Now you just need to follow the steps for cloning this repository to your local machine.
