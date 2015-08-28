@@ -1,6 +1,7 @@
 ## Design Reflection
 
 The six phases of web design are:
+
 1. **Information Gathering** - Determine the purpose, goals, target audience, and content for the web page
 
 2. **Planning** - Create sitemap to ensure easy navigation
