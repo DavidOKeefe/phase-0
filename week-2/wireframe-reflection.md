@@ -6,6 +6,10 @@ My first attempt at wireframing was challenging. This was definitely a rabbit ho
 
 This challenge made me consider many questions about layout and design. I spent some time looking at various wireframe images, existing websites, and wordpress themes. 
 
-![Wireframe Index](imgs/Wireframe-Index.svg)
+### Website Index
 
-![Wireframe Blog Index](imgs/Wireframe-Blog-Index.svg)
+![Wireframe Index](imgs/Wireframe-Index.jpg)
+
+### Blog Index
+
+![Wireframe Blog Index](imgs/Wireframe-Blog-Index.jpg)
