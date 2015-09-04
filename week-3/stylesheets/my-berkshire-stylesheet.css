@@ -1,0 +1,20 @@
+* {
+  color: #000080;
+  background: #ffffff;
+}
+ul li {
+  font-size: 12px;
+}
+a {
+  font-size: 16px;
+  color: #800080;
+}
+a:visited {
+  color: #ff0000;
+}
+.LeftList {
+
+}
+.RightList {
+
+}
