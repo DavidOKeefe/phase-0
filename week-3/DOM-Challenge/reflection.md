@@ -17,20 +17,20 @@ A: I found it to be helpful to get me using developer tools. I've been looking a
 
 
 ### Change the Colors
-![Change the Colors](imgs/1-Change_the_Colors.png =250x)
+![Change the Colors](imgs/1-Change_the_Colors.png)
 ### Column
-![Columns](imgs/2-Columns.png =250x)
+![Columns](imgs/2-Columns.png)
 ### Row
-![Row](imgs/3-Row.png =250x)
+![Row](imgs/3-Row.png)
 ### Make Equidistant
-![Make Equidistant](imgs/4-Make_Equidistant.png =250x)
+![Make Equidistant](imgs/4-Make_Equidistant.png)
 ### Square
-![Square](5-Square.png =250x)
+![Square](imgs/5-Square.png)
 ### Footer
-![Footer](6-Footer.png =250x)
+![Footer](imgs/6-Footer.png)
 ### Header
-![Header](7-Header.png =250x)
+![Header](imgs/7-Header.png)
 ### Sidebar
-![Sidebar](8-Sidebar.png =250x)
+![Sidebar](imgs/8-Sidebar.png)
 ### Get Creative
-![Get Creative](9-Get_Creative.png =250x)
+![Get Creative](imgs/9-Get_Creative.png)
