@@ -35,7 +35,6 @@ section .right-list {
 }
 
 footer {
-/*  clear: both;*/
   text-align: center;
   font-size: 0.625em;
   position: absolute;
@@ -61,3 +60,32 @@ ul li a {
 a:visited {
   color: #ff0000;
 }
+
+/*
+Q: What is important to know when linking an external file (like a stylesheet)
+   to an HTML file?
+A: It's important to know the files relative location and the type of of file
+   that is being linked to. i.e a stylesheet.
+
+Q: What tricks did you use to help you with positioning? How hard was it to get
+   the site as you wanted it?
+A: Some of the options that helped were the use of classes to group items,
+   positioning, width, height, top and bottom. It was especially challenging
+   to work keep formatting in place as the browser window changed size. Lots
+   of strange behavior seems to happen with very small window sizes.
+
+Q: What CSS did you use to modify the element style (like size, color, etc.)
+A: Yes, size, color, font-weight. The berkshire site was very minimally styled.
+
+Q: Did you modify the HTML to include classes or ids? If so, which did you
+   chose and why? If you didn't, how would you know which one to add to your
+   HTML?
+A: Classes, used to differentiate between the two unordered lists so they could
+   be floated left and right. I also tried adding a second class to both lists
+   so I could dry out the code and group similar items. Mostly for practice.
+
+Q: When you compared your site to the actual code base, which do you think had
+   cleaner code that followed best practices and why?
+A: The actual code base includes all styling within the HTML document. Our
+   recreation follows best practices by separating styling using CSS.
+*/
