@@ -1,3 +1,44 @@
-html {
-  background: blue;
+body {
+    background-color: gray;
+    border: 0.1em, solid, black;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+
+header {
+    background-color: blue;
+    width: 100%;
+    margin: auto;
+}
+header h1 {
+    color: white;
+    padding: 5px;
+}
+header p {
+    background-color: #CCCCCC;
+    padding: 5px;
+}
+.column-1 {
+    float: left;
+    width: 45%;
+    margin-left: 10px;
+    padding: 5px;
+}
+.column-2 {
+    float: right;
+    width: 45%;
+    margin-right: 10px;
+    padding: 5px;
+}
+details {
+    background-color: #CCCCCC;
+}
+footer {
+    background-color: #CCCCCC;
+    position: fixed;
+    bottom:0;
+    width: 100%;
 }
