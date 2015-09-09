@@ -6,7 +6,7 @@ A: Puts writes a given object to the screen. Whatever appears after puts will ap
 
 Q: What is an integer? What is a float?
 
-A: An integer is a number with no decimal places and a float is a number that contains decimals. For examle 25 is an integer while 8.37 is a float.
+A: An integer is a number with no decimal places and a float is a number that contains decimals. For example 25 is an integer while 8.37 is a float.
 
 Q: What is the difference between float and integer division? How would you explain the difference to someone who doesn't know anything about programming?
 
@@ -33,11 +33,11 @@ puts minutes_in_years(10)
 
 Q: How does Ruby handle addition, subtraction, multiplication, and division of numbers?
 
-A: Ruby is able to handle all these mathmatical operations.
+A: Ruby is able to handle all these mathematical operations.
 
 Q: What is the difference between integers and floats?
 
-A: An integer is a number with no decimal places and a float is a number that contains decimals. For examle 25 is an integer while 8.37 is a float.
+A: An integer is a number with no decimal places and a float is a number that contains decimals. For example 25 is an integer while 8.37 is a float.
 
 Q: What is the difference between integer and float division?
 
