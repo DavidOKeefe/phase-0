@@ -1,4 +1,4 @@
-# I worked on this challenge with: Eric.
+# I worked on this challenge with: Eric Shou.
 
 
 # Your Solution Below
