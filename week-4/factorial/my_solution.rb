@@ -5,12 +5,11 @@
 
 # Your Solution Below
 def factorial(number)
-  num = number
   answer = 1
 
-  while num > 0 do
-    answer *= num
-    num -= 1
+  until number == 0
+    answer *= number
+    number -= 1
   end
   answer
 end
