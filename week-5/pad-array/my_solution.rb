@@ -27,35 +27,57 @@
 #Return the new array
 
 
-# 1. Initial Solution
+# Initial Solution # 1
 
-def pad (array, min_size, *optional_padding)
-  array_length = array.length
-  new_array = []
-  array.each {|num| new_array << num}
-  until array_length >= min_size
-    if optional_padding.length > 0
-      new_array << optional_padding
-    else
-      new_array << nil
-    end
-    array_length += 1
-  end
-  return new_array.flatten
+# def pad (array, min_size, *optional_padding)
+#   array_length = array.length
+#   new_array = []
+#   array.each {|num| new_array << num}
+#   until array_length >= min_size
+#     if optional_padding.length > 0
+#       new_array << optional_padding
+#     else
+#       new_array << nil
+#     end
+#     array_length += 1
+#   end
+#   return new_array.flatten
+# end
+
+
+# Initial Solution # 2
+
+# def pad (array, min_size, optional_padding=nil)
+#   array_length = array.length
+#   new_array = array.clone
+#   until array_length >= min_size
+#     new_array << optional_padding
+#     array_length += 1
+#   end
+#   return new_array
+# end
+
+# def pad! (array, min_size, optional_padding=nil)
+#   array_length = array.length
+#   until array_length >= min_size
+#     array << optional_padding
+#     array_length += 1
+#   end
+#   return array
+# end
+
+# Refactored Solution
+
+def pad (collection, min_size, optional_padding=nil)
+  amount_to_pad = min_size - collection.length
+  starting_position = collection.length
+  collection.clone.fill(optional_padding, starting_position , amount_to_pad)
 end
 
-def pad! (array, min_size, *optional_padding)
-  array_length = array.length
-  until array_length >= min_size
-    if optional_padding.length > 0
-      array << optional_padding
-    else
-      array << nil
-    end
-    array_length += 1
-  end
-  array.flatten!
-  return array
+def pad! (collection, min_size, optional_padding=nil)
+  amount_to_pad = min_size - collection.length
+  starting_position = collection.length
+  collection.fill(optional_padding, starting_position , amount_to_pad)
 end
 
 # 4. Reflection
@@ -76,12 +98,11 @@ end
 #
 # Q: When you refactored, did you find any existing methods in Ruby to clean up
 #    your code?
-# A: We refactored a little as we went. We used .flatten for the first time.
+# A: We used .flatten .clone .fill
 #
 # Q: How readable is your solution? Did you and your pair choose descriptive
 #    variable names?
-# A: It's fairly readable. I think we could probably still break this into
-#    multiple methods to help with the readability.
+# A: I think it's fairly readable in the refactored version.
 #
 # Q: What is the difference between destructive and non-destructive methods in
 #    your own words?
