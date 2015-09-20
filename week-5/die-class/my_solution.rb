@@ -42,22 +42,16 @@
 # 3. Refactored Solution
 
 class Die
+  attr_reader :sides
+
   def initialize(sides)
     sides > 0 ? (@sides = sides) : (raise ArgumentError)
-  end
-
-  def sides
-    @sides
   end
 
   def roll
     rand(1..sides)
   end
 end
-
-
-
-
 
 # 4. Reflection
 
