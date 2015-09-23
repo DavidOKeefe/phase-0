@@ -48,7 +48,7 @@
 
 
 
-# Refactored Solution
+# Refactored Solution - Refactor done with a developer explaining some OOD principles.
 
 class GuessingGame
   attr_reader :answer
@@ -104,3 +104,27 @@ class Guess
 end
 
 # Reflection
+
+
+# Q: How do instance variables and methods represent the characteristics and
+#    behaviors (actions) of a real-world object?
+# A: The class creates an object and instance variables are attributes specific
+#    to the object that was created. Methods are the behavior of that object.
+#
+# Q: When should you use instance variables? What do they do for you?
+# A: They should be used for attributes of an object created in a class. If the
+#    variable only needs to be available within a method or within an
+#    iteration then it should be a local variable but if it's a property of the
+#    object instance it should be an instance variable.
+#
+# Q: Explain how to use flow control. Did you have any trouble using it in this
+#    challenge? If so, what did you struggle with?
+# A: Flow control is an evaluation of attributes and a different return or action
+#    based on the results of that evaluation. I didn't have trouble implementing
+#    the if/else logic but I wonder if there is a more succinct way to implement
+#    this evaluation.
+#
+# Q: Why do you think this code requires you to return symbols? What are the
+#    benefits of using symbols?
+# A: The benefits are that symbols are immutable so their value will not be
+#    changed and their object id will remain the same.
