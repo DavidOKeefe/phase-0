@@ -86,12 +86,13 @@
 require 'pp'
 
 class BingoBoard
+  # include BingoBoardBuilder
   BINGO_LETTERS = [ "B", "I", "N", "G", "O" ]
 
   attr_reader :bingo_board
 
   def initialize(board)
-    @bingo_board = board
+    @bingo_board = build_board
   end
 
   def play_game
@@ -106,6 +107,20 @@ class BingoBoard
   end
 
 private
+  def build_board
+    board = [[],[],[],[],[]]
+    starting_number = 1
+    ending_number = 15
+    5.times do
+      board.map do |column|
+        column << rand(starting_number..ending_number)
+      end
+      starting_number += 15
+      ending_number += 15
+    end
+    board
+  end
+
   def selected_ball
     @selected_ball ||= [BINGO_LETTERS.sample, rand(1..100)]
   end
@@ -147,6 +162,22 @@ private
          |__|     \\______/   \\______/         \\__/  \\__/     |__| |__| \\__| (__)"
 end
 
+
+# module BingoBoardBuilder
+#   def build_board
+#     board = [[],[],[],[],[]]
+#     starting_number = 1
+#     ending_number = 15
+#     5.times do
+#       board.map do |column|
+#         column << rand(starting_number..ending_number)
+#       end
+#       starting_number += 15
+#       ending_number += 15
+#     end
+#     board
+#   end
+# end
 
 
 
