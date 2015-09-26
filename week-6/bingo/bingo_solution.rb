@@ -98,9 +98,11 @@ class BingoBoard
   def play_game
     until winning_board do
       pp "The selected ball is #{selected_ball[0]}, #{selected_ball[1]}."
+      sleep 0.2
       check_board_for_match
       pp "Your board is now:"
       pp @bingo_board
+      sleep 0.2
       return_ball_to_bin
     end
     puts WINNING_MESSAGE
@@ -118,15 +120,32 @@ private
       starting_number += 15
       ending_number += 15
     end
+    board[2][2] = "X"
     board
   end
 
   def selected_ball
-    @selected_ball ||= [BINGO_LETTERS.sample, rand(1..100)]
+    @selected_ball ||= random_ball
   end
 
   def return_ball_to_bin
     @selected_ball = nil
+  end
+
+  def random_ball
+    random_ball = [BINGO_LETTERS.sample]
+    if random_ball == ["B"]
+      random_ball << rand(1..15)
+    elsif random_ball == ["I"]
+      random_ball << rand(16..30)
+    elsif random_ball == ["N"]
+      random_ball << rand(31..45)
+    elsif random_ball == ["G"]
+      random_ball << rand(46..60)
+    elsif random_ball == ["O"]
+      random_ball << rand(61..75)
+    end
+    random_ball
   end
 
   def check_board_for_match
