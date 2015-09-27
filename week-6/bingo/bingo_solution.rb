@@ -86,7 +86,6 @@
 require 'pp'
 
 class BingoBoard
-  # include BingoBoardBuilder
   BINGO_LETTERS = [ "B", "I", "N", "G", "O" ]
 
   attr_reader :bingo_board
@@ -180,23 +179,6 @@ private
          |  |    |  `--'  | |  `--'  |       \\    /\\    /    |  | |  |\\   | |__|
          |__|     \\______/   \\______/         \\__/  \\__/     |__| |__| \\__| (__)"
 end
-
-
-# module BingoBoardBuilder
-#   def build_board
-#     board = [[],[],[],[],[]]
-#     starting_number = 1
-#     ending_number = 15
-#     5.times do
-#       board.map do |column|
-#         column << rand(starting_number..ending_number)
-#       end
-#       starting_number += 15
-#       ending_number += 15
-#     end
-#     board
-#   end
-# end
 
 
 
