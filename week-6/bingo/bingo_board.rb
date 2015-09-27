@@ -3,7 +3,8 @@ class BingoBoard
   attr_reader :column_starting_number, :column_ending_number
 
   def self.build
-    new.build
+    bingo_board = new.build
+    bingo_board.board
   end
 
   def initialize
@@ -16,7 +17,7 @@ class BingoBoard
   def build
     rows.times { assign_column_numbers }
     set_free_space
-    board
+    self
   end
 
   private
