@@ -1,4 +1,5 @@
 require_relative '../bingo_board'
+require 'pry'
 
 describe BingoBoard do
   subject(:bingo_board) { described_class.build }
@@ -15,14 +16,20 @@ describe BingoBoard do
     expect(bingo_board[2][2]).to eq('X')
   end
 
-  describe 'columns' do
-    it 'has B numbers between 1 and 15' do
+  describe 'B column' do
+    it 'has numbers between 1 and 15' do
       expect(
           (0..4).all? do |column|
             bingo_board[column][0] >= 1 && bingo_board[column][0] <= 15
           end
         ).to eq(true)
     end
+
+    xit 'has unique numbers' do
+    end
+  end
+
+  describe 'columns' do
 
     it 'has I numbers between 16 and 30' do
       expect(
