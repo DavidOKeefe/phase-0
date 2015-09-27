@@ -84,14 +84,15 @@
 #Refactored
 
 require 'pp'
+require_relative 'bingo_board'
 
-class BingoBoard
+class Bingo
   BINGO_LETTERS = [ "B", "I", "N", "G", "O" ]
 
   attr_reader :bingo_board
 
-  def initialize(board)
-    @bingo_board = build_board
+  def initialize(board_factory: BingoBoard)
+    @bingo_board = board_factory.build
   end
 
   def play_game
@@ -108,21 +109,6 @@ class BingoBoard
   end
 
 private
-  def build_board
-    board = [[],[],[],[],[]]
-    starting_number = 1
-    ending_number = 15
-    5.times do
-      board.map do |column|
-        column << rand(starting_number..ending_number)
-      end
-      starting_number += 15
-      ending_number += 15
-    end
-    board[2][2] = "X"
-    board
-  end
-
   def selected_ball
     @selected_ball ||= random_ball
   end
@@ -183,14 +169,8 @@ end
 
 
 #DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
-board = [[47, 44, 71, 8, 88],
-        [22, 69, 75, 65, 73],
-        [83, 85, 97, 89, 57],
-        [25, 31, 96, 68, 51],
-        [75, 70, 54, 80, 83]]
 
-new_game = BingoBoard.new(board)
-new_game.play_game
+Bingo.new.play_game
 
 
 

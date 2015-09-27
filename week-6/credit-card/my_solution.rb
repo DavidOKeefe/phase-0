@@ -124,6 +124,7 @@
 
 class CreditCard
   attr_accessor :card_number
+  private :card_number
 
   def initialize(card_number)
     @card_number = card_number.to_s.split("")
@@ -135,7 +136,6 @@ class CreditCard
   end
 
 private
-
   def add_numbers
     split_digits.inject { |sum, num| sum += num.to_i }
   end
