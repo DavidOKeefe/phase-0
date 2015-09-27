@@ -15,6 +15,7 @@ class BingoBoard
 
   def build
     rows.times { assign_column_numbers }
+    set_free_space
     board
   end
 
@@ -31,7 +32,6 @@ class BingoBoard
   def assign_column_numbers
     board.map { |column| column << rand(column_starting_number..column_ending_number) }
     increment_column_numbers
-    set_free_space
   end
 
   def increment_column_numbers
