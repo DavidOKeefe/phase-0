@@ -3,38 +3,23 @@
 # I worked on this challenge with: Jamie Runyan.
 # We spent 1.5 hours on this challenge.
 
-# EXPLANATION OF require_relative
-# Require_relative - it needs a file that will be stored in the same location.
-# require means you have to have to specify the exact location (require only loads once)
-# load - gets called multiple times in case date changes.
-
-# hash with a hash inside it. the state names are stings and the population densities are symbols.
-# Hashy hash is a hash with a value that is another hash.
-# STATE-DATA, constant, scope - all of the classes can access it.
 require_relative 'state_data'
 
 class VirusPredictor
-attr_reader :population_density, :population, :state
+  attr_reader :population_density, :population, :state
 
-# set up instance variables for class VirusPredictor
-# defines what arguments will be accepted
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
-# public way of calling two methods to calculate our virus effects
   def virus_effects
     puts "#{state} will lose #{predicted_deaths} people in this outbreak and will spread across the state in #{speed_of_spread} months.\n"
   end
 
-#  start of private
   private
-# checking the size of the population density and calculate the number of deaths based on that density.
-# .floor (rounds down)
   def predicted_deaths
-    # predicted deaths is solely based on population density
     case population_density
       when 0..49 then (population * 0.05).floor
       when 50..99 then (population * 0.1).floor
@@ -44,7 +29,6 @@ attr_reader :population_density, :population, :state
     end
   end
 
-# finding speed of spread, calculating how fast it will spread based only on density.
   def speed_of_spread
     case population_density
       when 0..49 then 2.5
@@ -70,4 +54,15 @@ STATE_DATA.each do |state_name, state_info|
 #=======================================================================
 # Reflection Section
 
-
+# Q: What are the differences between the two different hash syntaxes shown in the state_data file?
+# A: The first uses a string and the second uses a symbol
+# Q: What does require_relative do? How is it different from require?
+# A: require_relative - it needs a file that will be stored in the same location.
+#    Require means you have to have to specify the exact location (require only loads once)
+#    load - gets called multiple times in case date changes.
+# Q: What are some ways to iterate through a hash?
+# A: .each, .each_key, .each_pair, .map
+# Q: When refactoring virus_effects, what stood out to you about the variables, if anything?
+# A: Because they were instance variables they don't need to be passed as arguments
+# Q: What concept did you most solidify in this challenge?
+# A: That calling methods returns the last evaluation.
