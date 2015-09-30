@@ -1,6 +1,6 @@
-/ Manipulating JavaScript Objects
+// Manipulating JavaScript Objects
 
-// I worked on this challenge: [by myself, with: ]
+// I worked on this challenge by myself.
 
 // There is a section below where you will write your code.
 
@@ -16,21 +16,36 @@ var terah = {
 // __________________________________________
 // Write your code below.
 
-
-
-
-
-
-
-
-
+var adam = {name: "Adam"}
+terah.spouse = adam
+terah.weight = 125
+delete terah.eyeColor
+adam.spouse = terah
+terah.children = {}
+var carson = {}
+terah.children.carson = carson
+carson.name = "Carson"
+var carter = {}
+terah.children.carter = carter
+carter.name = "Carter"
+var colton = {}
+terah.children.colton = colton
+colton.name = "Colton"
+adam.children = terah.children
 
 
 // __________________________________________
 // Reflection: Use the reflection guidelines
 //
+// Q: What tests did you have trouble passing? What did you do to make it pass?
+//    Why did that work?
+// A: I had to look up the delete format. .delete didn't work.
 //
+// Q: How difficult was it to add and delete properties outside of the object itself?
+// A: Not too difficult once I got the hang of delete.
 //
+// Q: What did you learn about manipulating objects in this challenge?
+// A: I got practice with adding and deleting JS objects.
 //
 //
 //
