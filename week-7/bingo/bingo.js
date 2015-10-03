@@ -1,3 +1,57 @@
+// PSEUDOCODE
+//
+// -- Create function to generate new bingo boards --
+//
+// 1.) Create an empty instance variable 'board' that will accept board values.
+//     No need to nest arrays since website will format table.
+// 2.) Create variables containing each of the possible column values (BINGO).
+// 3.) Create loop to add the necessary 25 values to the board variable.
+// 4.) Within the loop shuffle and pop each of the (BINGO) variables into the board variable.
+// 5.) Set the center square as a free space.
+// 6.) Return the instance variable board.
+//
+// -- Create functions to start game with two players --
+//
+// 1.) Set up empty board variables that can be accessed by all program functions
+// 2.) Create startGame function that will generate two instances of gameBoard.
+//
+// -- Create function to generate a random bingo ball --
+//
+// 1.) Create an empty variable to hold the generated ball.
+// 2.) Select a random BINGO letter and add it to the variable.
+// 3.) Based on random letter, select random number from appropriate range and
+//     add the number to the variable as well.
+// 4.) Return the random ball.
+//
+// -- Create function to select ball and compare to players boards --
+//
+// 1.) Create a variable and set it equal to the return value from the random ball function.
+// 2.) Variable will be used to display selected ball to game player.
+// 3.) Iterate through board 1 and determine if ball number is on board 1.
+//     If true, replace the number on the board with an 'X'.
+// 4.) Next iterate through the second board in the same way so both boards have been updated.
+//
+// -- Check board for winning board --
+//
+// 1.) Define all possible winning combinations.
+// 2.) After each ball is pulled and the boards are updated, compare against the
+//     winning combinations to see if there is a winner.
+// 3.) If there is a winner, display winning message.
+//
+// -- Display Boards on Projects Page --
+// 1.) Add button to HTML that will call the start game method.
+// 2.) When game is started, display bingo board on the page
+// 3.) Hide the start game button.
+// 4.) Add button to generate a ball that is only visible once the game has started.
+// 5.) When ball is generated, display it to the webpage.
+// 6.) When ball is generated, call the check board method. Refresh board on webpage.
+// 7.) Generate ball can be clicked until board is a winner.
+// 8.) Once game is a winner, hide the generate ball button.
+// 9.) Add button to start a new game.
+
+
+// See online at: https://davidokeefe.github.io/projects/bingo_project/views/bingo.html
+
 var bingoLetters = [ "B", "I", "N", "G", "O" ]
 var board1 = []
 var board2 = []
@@ -74,7 +128,7 @@ function winningMessage(player){
 function randomBall(){
   var randomBall = []
   randomBall.push(bingoLetters[randomNumber(0,4)])
-    if (randomBall == 'B'){randomBall.push(randomNumber(1,15))}
+    if(randomBall == 'B'){randomBall.push(randomNumber(1,15))}
     else if(randomBall == 'I'){ randomBall.push(randomNumber(16,30)) }
     else if(randomBall == 'N'){ randomBall.push(randomNumber(31,45)) }
     else if(randomBall == 'G'){ randomBall.push(randomNumber(46,60)) }
@@ -134,3 +188,19 @@ function winningBoard(playersBoard){
     return true;
   }
 }
+
+// Reflection
+// Q: What was the most difficult part of this challenge?
+// A: Accessing the DOM was definitely the most challenging part. Once I got the
+//    handle of that, applying CSS styling via JS was a little challenging.
+
+// Q: What did you learn about creating objects and functions that interact with one
+//    another?
+// A: I found the 'this.' instance call to be very useful in certain situations.
+
+// Q: Did you learn about any new built-in methods you could use in your refactored
+//    solution? If so, what were they and how do they work?
+// A: All the DOM methods were brand new to me.
+
+// Q: How can you access and manipulate properties of objects?
+// A: Iteration, or directly to the variable.
