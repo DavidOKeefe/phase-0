@@ -1,5 +1,6 @@
 ###One to One Schema
 ![One to One Schema](imgs/one_to_one_schema.png)
+
 In the following relationship, each employee has one unique address. Each address has multiple columns so it makes sense to keep this info on a table separate from the employee table.
 
 ###Many to Many Relationship
