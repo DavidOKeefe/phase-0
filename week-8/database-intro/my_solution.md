@@ -64,15 +64,15 @@
 
 ###Reflection
 
- - Q: What are databases for?
- - A: Databases are for managing and organizing data so it can be accessed.
+- Q: What are databases for?
+- A: Databases are for managing and organizing data so it can be accessed.
 
- - Q: What is a one-to-many relationship?
- - A: A one-to-many relationship is where one element can be related to many other elements. For example, one music album can have many tracks.
+- Q: What is a one-to-many relationship?
+- A: A one-to-many relationship is where one element can be related to many other elements. For example, one music album can have many tracks.
 
-  - Q: What is a primary key? What is a foreign key? How can you determine which is which?
-  - A: A primary key is how each record in the database is uniquely identified. A foreign key is a reference in one table to a column in another table.
+- Q: What is a primary key? What is a foreign key? How can you determine which is which?
+- A: A primary key is how each record in the database is uniquely identified. A foreign key is a reference in one table to a column in another table.
 
-  - Q: How can you select information out of a SQL database? What are some general guidelines for that?
-  - A: You select information by specifying the columns you'd like to extract, the tables that contain the data, and the conditions when data should be extracted.
+- Q: How can you select information out of a SQL database? What are some general guidelines for that?
+- A: You select information by specifying the columns you'd like to extract, the tables that contain the data, and the conditions when data should be extracted.
 
