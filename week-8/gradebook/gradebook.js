@@ -15,41 +15,73 @@ var scores = [ [80, 70, 70, 100],
                [75, 70, 80, 75],
                [100, 90, 95, 85] ]
 
-
-
-
-
-
 // __________________________________________
 // Write your code below.
 
+// var gradebook = {}
 
+// for(var i = 0; i < students.length; i++) {
+//   gradebook[students[i]] = {};
+//   gradebook[students[i]]["testScores"] = scores[i];
+// }
 
+// function average(array){
+//   var total = 0;
+//   for(var i = 0; i<array.length; i++){ total += array[i]; }
+//   return total/array.length;
+// }
 
-
-
-
+// gradebook["addScore"] = function(name,score){
+//   gradebook[name]["testScores"].push(score);
+// }
+// gradebook["getAverage"] = function(name){
+//   return average(gradebook[name]["testScores"]);
+// }
 
 // __________________________________________
 // Refactored Solution
 
+var gradebook = {}
 
+function addStudents(){
+  for(var i = 0; i < students.length; i++) {
+    gradebook[students[i]] = {};
+    gradebook[students[i]]["testScores"] = scores[i];
+  }
+}
+addStudents()
 
+function average(numbersCollection){
+  var total = 0;
+  for(var i = 0; i<numbersCollection.length; i++){
+    total += numbersCollection[i];
+  }
+  return total/numbersCollection.length;
+}
 
-
-
+gradebook["addScore"] = function(name,score){
+  gradebook[name]["testScores"].push(score);
+}
+gradebook["getAverage"] = function(name){
+  return average(gradebook[name]["testScores"]);
+}
 
 
 // __________________________________________
 // Reflect
 
 
+// Q: What did you learn about adding functions to objects?
+// A: We first added the functions directly to the object but then to get the tests to pass
+//    added them separately. We were able to create them without names but assigned to keys.
 
+// Q: How did you iterate over nested arrays in JavaScript?
+// A: Using the for loop maybe simplified this compared to Ruby?
 
-
-
-
-
+// Q: Were there any new methods you were able to incorporate? If so, what were they
+//    and how did they work?
+// A: No new methods but got practice creating unnamed functions and working with nested objects.
+//    Researched some options such as Object.assign but nothing we found seemed better than the current approach.
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
