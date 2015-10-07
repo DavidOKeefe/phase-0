@@ -1,6 +1,6 @@
 /*
 Gradebook from Names and Scores
-I worked on this challenge [by myself, with:]
+I worked on this challenge with: Eunice Choi
 This challenge took me [#] hours.
 You will work with the following two variables.  The first, students, holds the names of four students.
 The second, scores, holds groups of test scores.  The relative positions of elements within the two
