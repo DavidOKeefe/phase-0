@@ -144,13 +144,15 @@ p dr_evil.translate("alc@qeoi*e$xvmppmsr^alir#ai*gsyph%qeoi...#fmppmsrw?")
 
 
 # Reflection
-# Keep your reflection limited to 10-15 minutes!
 
 # Q: What concepts did you review or learn in this challenge?
-# A:
+# A: I was able to review classes, single responsibility, regex, reading code and refactoring.
+#    The rotate method was new to me.
+#    I created an rspec test for this assignment as well so I got some practice with testing.
 #
 # Q: What is still confusing to you about Ruby?
-# A:
+# A: I've been trying to implement some of the concepts I read about in POODR but that book takes single responsibility
+#    so far! I could probably still break up my methods more.
 #
 # Q: What are you going to study to get more prepared for Phase 1?
-# A:
+# A: I'm going to keep working on ruby problems to improve on my problem solving skills and keep creating rspec tests.
