@@ -67,14 +67,14 @@ var officers = {
 
 // Pseudocode
 // 1.) Iterate through votes object and access the ballot(object) for each names property.
-// 2.) Iterate through the ballot object. Compare the position with the object associated with the position in the vote count object.
+// 2.) Iterate through the ballot object. Compare the position with the object associated with the position in the vote
+//     count object.
 // 3.) Check if they have the same value. If they do have the same value, add one to that values counter.
 // 4.) If the value doesn't exist, add the value and set the counter equal to 1.
-
-
 // 5.) Iterate through voteCount accessing each position
 // 6.) Within each position, access the name that has the highest voteCount
-//      --create a local variable to store first (name, voteCount) pair and compare each successive pair with the variable, replacing that variable with the newest pair only if their voteCount is higher
+//      --create a local variable to store first (name, voteCount) pair and compare each successive pair with the
+//        variable, replacing that variable with the newest pair only if their voteCount is higher
 //      --once done, push name to officers object.
 // __________________________________________
 // Initial Solution
@@ -84,10 +84,8 @@ var officers = {
 //     var ballot = votes[names];
 //       for (var position in ballot){
 //         if(ballot.hasOwnProperty(position)){
-
-                          //below checks if voteCount already has the name for that position. If so, it adds one to its value and if not, it adds the name and sets its value to one.
-
-
+                          //below checks if voteCount already has the name for that position. If so, it adds one to its
+                          //value and if not, it adds the name and sets its value to one.
 //           if (voteCount[position].hasOwnProperty([ballot[position]])){
 //               voteCount[position][ballot[position]] += 1
 //               }
@@ -113,10 +111,7 @@ var officers = {
 
 // console.log(voteCount)
 
-
-
 //Prez: louise, VP: Hermann, Sec: Fred, Tres: Ivy
-
 
 // __________________________________________
 // Refactored Solution
@@ -146,12 +141,17 @@ for (var positions in voteCount) {
 }
 
 
-
-
 // __________________________________________
 // Reflection
 
-
+// Q: What did you learn about iterating over nested objects in JavaScript?
+// A: I learned that accurate variable names are very important to keep track of the values while looping.
+//
+// Q: Were you able to find useful methods to help you with this?
+// A: The for/in and .hasOwnProperty were both very useful.
+//
+// Q: What concepts were solidified in the process of working through this challenge?
+// A: Accessing objects through bracket notation.
 
 
 
