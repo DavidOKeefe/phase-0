@@ -67,3 +67,19 @@ console.log(isFibonacci(400));
 
 // Reflection
 
+// Q: What concepts did you solidify in working on this challenge?
+// A: Definitely emphasized the importance of the return statement in JS.
+
+// Q: What was the most difficult part of this challenge?
+// A: I had some difficulty passing in default arguments. For some reason it wouldn't
+//    work the way MDN described it. I had to do an if statement to check instead.
+
+// Q: Did you solve the problem in a new way this time?
+// A: No, the solution was basically the same.
+
+// Q: Was your pseudocode different from the Ruby version? What was the same and
+//    what was different?
+// A: It was different in style likely because I had already understood the logic
+//    that I wanted to use to solve the problem.
+
+
